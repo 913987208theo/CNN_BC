@@ -65,7 +65,7 @@ test_data = ImageFolder(root='./cats_dogs/test_set', transform=transform)
 test_loader = DataLoader(test_data, batch_size=32, shuffle=False)
 
 # 创建文件用于保存测试结果，并写入表头
-with open("accuracy_results_resnet_18.txt", "w") as f:
+with open("accuracy_results_resnet.txt", "w") as f:
     f.write("Noise Ratio (%) \t Test Accuracy (%)\n")
 
 # 噪声率从0%到50%，每次增加1%
@@ -79,7 +79,7 @@ for noise_ratio in range(0, 51, 1):
     train_data = add_label_noise(train_data, noise_ratio)
     train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
 
-    # 创建 ResNet-18 模型
+    # 创建 ResNet-50 模型
     model = create_model().to(device)
 
     # 定义损失函数和优化器
