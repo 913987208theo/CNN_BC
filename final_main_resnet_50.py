@@ -8,9 +8,9 @@ import random
 import torchvision.models as models
 import torch.nn.functional as F
 
-# 定义 ResNet-18 模型
+# 定义 ResNet-50 模型
 def create_model():
-    model = models.resnet18(weights=None)  # 使用最新的API，替代 pretrained=False
+    model = models.resnet50(weights=None)  # 使用最新的API，替代 pretrained=False
     model.fc = nn.Sequential(
         nn.Linear(model.fc.in_features, 1),
         nn.Sigmoid()  # 在最后一层添加 Sigmoid 激活函数
@@ -87,7 +87,7 @@ for noise_ratio in range(0, 51, 1):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 训练模型
-    epochs = 2
+    epochs = 30
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
