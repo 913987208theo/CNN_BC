@@ -119,5 +119,5 @@ for noise_ratio in range(0, 51, 1):
     print(f"噪声率 {noise_ratio * 100}% 测试集准确率：{test_accuracy:.2f}%")
 
     # 将测试结果写入文件
-    with open("accuracy_results_resnet_18.txt", "a") as f:
+    with open("accuracy_results_resnet.txt", "a") as f:
         f.write(f"{noise_ratio * 100:.2f}\t\t{test_accuracy:.2f}\n")
