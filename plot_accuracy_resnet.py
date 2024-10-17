@@ -40,4 +40,4 @@ plt.grid(True)
 plt.legend()
 
 # 保存图表为图片文件
-plt.savefig('test_accuracy_plot_resnet_18.png')  # 保存为 PNG 图片
+plt.savefig('test_accuracy_plot_resnet.png')  # 保存为 PNG 图片
