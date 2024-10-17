@@ -24,7 +24,7 @@ def read_results(filename):
 
 
 # 读取结果
-noise_ratios, accuracies = read_results('accuracy_results_resnet_18.txt')
+noise_ratios, accuracies = read_results('accuracy_results_resnet.txt')
 
 # 生成折线图
 plt.figure(figsize=(8, 6))
