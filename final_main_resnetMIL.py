@@ -127,7 +127,7 @@ for noise_ratio in range(0, 51, 1):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 训练模型
-    epochs = 2
+    epochs = 50
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
